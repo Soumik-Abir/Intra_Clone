@@ -1,10 +1,14 @@
 import { Avatar, Button, Flex, Text } from "@chakra-ui/react";
 import useLogout from "../../hooks/useLogout";
 import useAuthStore from "../../store/authStore";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SuggestedHeader = () => {
-	const { handleLogout, isLoggingOut } = useLogout();
+	const navigate = useNavigate();
+	const handleLogoutSuccess = () => {
+        navigate("/auth"); // Use navigate instead of history.push
+    };
+	const { handleLogout, isLoggingOut } = useLogout(handleLogoutSuccess);
 	const authUser = useAuthStore((state) => state.user);
 
 	if (!authUser) return null;

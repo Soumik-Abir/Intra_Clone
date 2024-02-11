@@ -3,7 +3,7 @@ import { auth } from "../firebase/firebase";
 import useShowToast from "./useShowToast";
 import useAuthStore from "../store/authStore";
 
-const useLogout = () => {
+const useLogout = (onLogoutSuccess) => {
 	const [signOut, isLoggingOut, error] = useSignOut(auth);
 	const showToast = useShowToast();
 	const logoutUser = useAuthStore((state) => state.logout);
@@ -13,6 +13,7 @@ const useLogout = () => {
 			await signOut();
 			localStorage.removeItem("user-info");
 			logoutUser();
+			onLogoutSuccess();
 		} catch (error) {
 			showToast("Error", error.message, "error");
 		}
