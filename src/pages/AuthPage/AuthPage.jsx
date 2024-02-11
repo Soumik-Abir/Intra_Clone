@@ -5,11 +5,11 @@ import AuthForm from "../../components/AuthForm/AuthForm";
 const AuthPage = () => {
   return (
     <Flex minH={"100vh"} justifyContent={"center"} alignItems={"center"} px={4}>
-      <Container maxW={"container.md"} padding={0}>
+      <Container maxW={"container.md"} padding={2}>
         <Flex justifyContent={"center"} alignItems={"center"} gap={12}>
           {/* Left hand-side */}
           <Box display={{ base: "none", md: "block" }}>
-            <Image src="/auth.png" h={650} alt="Phone img" />
+            <Image src="/auth.png" h={600} alt="Phone img" />
           </Box>
 
           {/* Right hand-side */}
