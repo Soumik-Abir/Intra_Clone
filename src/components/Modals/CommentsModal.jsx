@@ -1,4 +1,5 @@
 import {
+	Box,
 	Button,
 	Flex,
 	Input,
@@ -36,9 +37,11 @@ const CommentsModal = ({ isOpen, onClose, post }) => {
 	}, [isOpen, post.comments.length]);
 
 	return (
+		<Box>
+
 		<Modal isOpen={isOpen} onClose={onClose} motionPreset='slideInLeft'>
 			<ModalOverlay />
-			<ModalContent bg={"black"} border={"1px solid gray"} maxW={"400px"}>
+			<ModalContent bg={"black"} border={"1px solid gray"} maxW={"500px"} margin={2}>
 				<ModalHeader>Comments</ModalHeader>
 				<ModalCloseButton />
 				<ModalBody pb={6}>
@@ -65,6 +68,7 @@ const CommentsModal = ({ isOpen, onClose, post }) => {
 				</ModalBody>
 			</ModalContent>
 		</Modal>
+		</Box>
 	);
 };
 
