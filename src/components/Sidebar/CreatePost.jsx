@@ -76,7 +76,7 @@ const CreatePost = () => {
 			<Modal isOpen={isOpen} onClose={onClose} size='xl'>
 				<ModalOverlay />
 
-				<ModalContent bg={"black"} border={"1px solid gray"}>
+				<ModalContent bg={"black"} border={"1px solid gray"} margin={2}>
 					<ModalHeader>Create Post</ModalHeader>
 					<ModalCloseButton />
 					<ModalBody pb={6}>
