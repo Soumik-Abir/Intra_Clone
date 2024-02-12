@@ -62,7 +62,7 @@ const Sidebar = () => {
 						borderRadius={6}
 						p={2}
 						w={{ base: 10, md: "full" }}
-						mt={"auto"}
+						mt={8}
 						justifyContent={{ base: "center", md: "flex-start" }}
 					>
 						<BiLogOut size={25} />
